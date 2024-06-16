@@ -7,7 +7,7 @@ import Description from "./components/Description";
 import { getFormatedWeatherData } from "./components/weatherService";
 import Alert from "@mui/material/Alert";
 import Stack from "@mui/material/Stack";
-import { green } from "@mui/material/colors";
+
 
 function App() {
   const [weather, setWeather] = useState(null);
