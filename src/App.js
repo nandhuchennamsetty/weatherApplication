@@ -7,7 +7,7 @@ import Description from "./components/Description";
 import { getFormatedWeatherData } from "./components/weatherService";
 import Alert from "@mui/material/Alert";
 import Stack from "@mui/material/Stack";
-// import { green } from "@mui/material/colors";
+
 
 function App() {
   const [weather, setWeather] = useState(null);
@@ -16,30 +16,7 @@ function App() {
   const [bg, setBg] = useState(coldBgImg);
   const [error, setError] = useState(null);
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const data = await getFormatedWeatherData(city, units);
-  //       setWeather(data);
-  //       console.log("data===>", data);
-  //       console.log("data temp===>", data.temp);
-
-  //       // dynamic bg
-  //       const threshold = units === "metric" ? 20 : 60;
-  //       if (data?.temp <= threshold) {
-  //         setBg(coldBgImg);
-  //       } else {
-  //         setBg(hotBgImg);
-  //       }
-        
-  //     } catch (e) {
-  //       console.log("error in data fetch==>",e)
-  //     }
-      
-      
-  //   };
-  //   fetchData();
-  // }, [units, city]);
+  
 
   useEffect(() => {
     const fetchData = async () => {
