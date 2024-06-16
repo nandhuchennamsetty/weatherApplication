@@ -1,13 +1,137 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --section-overlay:rgba(0,0,0,0.7);
+  --backgroung-overlay:rgba(0,0,0,0.2);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.app{
+ width:100%;
+ height: 100vh;
+ background-position: center;
+ background-size: cover;
+
+}
+.overlay{
+  width:100%;
+  height: 100vh;
+  background-color: var(--backgroung-overlay);
+}
+.container{
+  max-width: 800px;
+  margin:auto;
+  height: 100%;
+
+  display: flex;
+  align-items:center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+/* Top */
+.section{
+  width: 100%;
+  padding:1rem;
+  border-radius: 0.4rem;
+  color:white;
+
+}
+.section__inputs, .section__temperature{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--section-overlay);
+}
+
+.section__inputs>input{
+  border:0.8px solid white;
+  border-radius: 0.4rem;
+  /* color: white; */
+  padding: 0.5rem;
+  font-size: 20px;
+  font-weight: 200px;
+}
+.section__inputs>input:focus{
+  outline: none;
+}
+.section__inputs>button{
+  padding: 10px 50px;
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: white;
+}
+.section__inputs>button:hover{
+  cursor: pointer;
+  background-color: lightgray;
+}
+@media screen and (max-width:767px){
+    .section__inputs>input{
+  border:0.8px solid white;
+  border-radius: 0.4rem;
+  
+  width:150px;
+  padding: 0.2rem;
+  font-size: 20px;
+  font-weight: 200px;
+}
+.section__inputs>button{
+  padding: 5px 25px;
+}
+.temperature>h1{
+  font-size: 40px;
+}
+
+}
+
+.icon>h3{
+font-size: 15px;
+font-weight: 200;
+text-transform: capitalize;
+
+}
+
+/* @media screen and (min-width:820px){
+  .icon>h3{
+font-size: 15px;
+font-weight: 200;
+text-transform: capitalize;
+color: aqua;
+
+}
+.temperature>h1{
+  font-size: 60px;
+}
+} */
+ @media screen and (min-width: 768px) and (max-width: 1022px) {
+  .icon > h3 {
+    font-size: 30px;
+    font-weight: 400;
+    /* color: aqua; */
+  }
+  .icon>img{
+    height: 150px;
+    width: 150px;
+  }
+  .temperature>h1{
+  font-size: 70px;
+}
+
+
+}
+.btnStyle{
+  padding: 1rem;
+  border-radius: 16px;
+  background-image: radial-gradient(rgb(55, 20, 20),rgb(166, 166, 219),rgb(64, 46, 14));
+  color:aliceblue;
+  border: none;
+  font-size: 20px;
+  width:50%;
 }
